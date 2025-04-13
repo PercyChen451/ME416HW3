@@ -18,6 +18,5 @@ def twist_fill():
 
 
 if __name__ == '__main__':
-    """Test the twist_fill function when run as a script."""
     twist_msg = twist_fill()
     print("Generated Twist message:\n", twist_msg)
