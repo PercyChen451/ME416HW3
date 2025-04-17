@@ -3,7 +3,12 @@ import rclpy
 from rclpy.node import Node
 from geometry_msgs.msg import Twist
 from me416_utilities import MotorSpeedLeft, MotorSpeedRight
-
+"""
+ROS 2 Node for Differential Drive Motor Control
+This node converts Twist messages (linear and angular velocities) into individual
+motor speed commands for a differential drive robot. It subscribes to /cmd_vel
+and publishes the computed motor speeds to /motor_speeds.
+"""
 class MotorCommand(Node):
     """Node that converts Twist commands to motor speed commands."""
     def __init__(self):
